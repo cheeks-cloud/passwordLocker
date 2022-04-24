@@ -1,13 +1,13 @@
 
-# class Credential:
+class Credential:
 
-#   credentialList = []
+  credentialList = []
 
 
-#   def __init__(self,account,username,password):
-#     self.username = username
-#     self.password = password
-#     self.account = account
+  def __init__(self,account,username,password):
+    self.username = username
+    self.password = password
+    self.account = account
 
 #                                               #save credentials
 
