@@ -5,10 +5,11 @@ class User:
   userList = []
 
 
-  def __init__(self,fName,lName,email):
+  def __init__(self,fName,lName,email,username):
     self.fName = fName
     self.lName = lName
-    self.email = 
+    self.email = email
+    self.username = username
     
                                                 #saving a new user 
 
@@ -16,16 +17,16 @@ class User:
     User.userList.append(self)
 
 
+                                        #method to delete an existing user
+  def deleteUser(self):
+    User.userList.remove(self)
 
-  # def deleteUser(self):
-  #   User.userList.remove(self)
-
-
-  # @classmethod  
-  # def findByLastName(cls,lName):
-  #   for user in cls.userList:
-  #     if user.lName = lName:
-  #       return user
+                                         #method to find a user using their username
+  @classmethod  
+  def findByLastName(cls,username):
+    for user in cls.userList:
+      if user.username == username:
+        return user
 
 
   # @classmethod
