@@ -8,10 +8,12 @@ class User:
   def __init__(self,fName,lName,email):
     self.fName = fName
     self.lName = lName
-    self.email = email
+    self.email = 
+    
+                                                #saving a new user 
 
-  # def saveUser(self):
-  #   User.userList.append(self)
+  def saveUser(self):
+    User.userList.append(self)
 
 
 
