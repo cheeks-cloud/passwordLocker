@@ -1,7 +1,7 @@
-# from credential import Credential
-# from user import User
+from credential import Credential
+from user import User
 
-# #create a new user 
+#create a new user 
 
 # def createUser(fName, lName, email,username):
 #   newUser = User(fName,lName,email,username)
