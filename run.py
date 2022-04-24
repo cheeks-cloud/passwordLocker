@@ -7,16 +7,17 @@ def createUser(fName, lName, email,username):
   newUser = User(fName,lName,email,username)
   return newUser
 
-# def saveUser(user):
-#   user.saveUser()
+def saveUser(user):
+  user.saveUser()
 
-# def deleteUser(user):
-#   user.deleteUser()
+def deleteUser(user):
+  user.deleteUser()
 
-# def userExists(user):
-#   return  User.exists(user)
+def userExists(user):
+  return  User.exists(user)
 
-# def displayUsers
+def displayUsers():
+  return User.displayUsers()
 
 # # def find
 
