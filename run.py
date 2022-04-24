@@ -19,8 +19,7 @@ def userExists(user):
 def displayUsers():
   return User.displayUsers()
 
-
-
+# # def find
 
 def createCredential(username, password,account):
   newCredential = Credential(username, password, account)
@@ -116,9 +115,9 @@ def main():
             elif short_code == 'fc':
                 print("Enter the username you want to search for")
 
-                searchUser = input()
+                search_number = input()
 
-                if checkUserExists(searchUser):
+                if checkUser(searchUser):
                   searchUser = findByUsername(username)
                   print(f'{searchUser.fName}   {searchUser.lName}')
                   print('-' * 20)
