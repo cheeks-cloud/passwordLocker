@@ -23,28 +23,32 @@ class User:
 
                                          #method to find a user using their username
   @classmethod  
-  def findByLastName(cls,username):
+  def findByUsername(cls,username):
     for user in cls.userList:
       if user.username == username:
         return user
 
+                                         #method to check whether a user exists 
+  @classmethod
+  def userExists(cls,email):
+    for user in cls.userList:
+       if user.email == email:
+           return True
 
-  # @classmethod
-  # def userExists(cls,lName):
-  #   for user in cls.userList:
-  #      if user.lName = lName:
-  #          return True
+       return False
 
-  #      return False
+                                            #method to display all users      
 
-  # @classmethod
-  # def displayUsers(cls):
-  #   return cls.userList
+  @classmethod
+  def displayUsers(cls):
+    return cls.userList
 
-  # @classmethod
-  # def copyEmail(cls,lName):
-  #   userFound = lName.findByLastName(lName)
-  #   pyperclip.copyEmail(userFound.email)
+                                               #method to copy and paste
+
+  @classmethod
+  def copyEmail(cls,username):
+    userFound = username.findByUsername(username)
+    pyperclip.copyEmail(userFound.email)
 
 
 
