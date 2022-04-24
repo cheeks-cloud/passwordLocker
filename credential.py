@@ -1,3 +1,5 @@
+import random 
+
 
 class Credential:
 
@@ -16,24 +18,24 @@ class Credential:
 
                                               #delete credentials
 
-  def deleteCredentials(self):
+  def deleteCredential(self):
     Credential.credentialList.remove(self)
 
 
-  #                                         #generatePassword
+                                          #generatePassword
 
-  # def generatePassword(self, size = 6, char=strings.ascii_uppercase +
-  # ascii_lowercase + string.digits):
+  def generatePassword(self, size = 6, char=strings.ascii_uppercase +
+  ascii_lowercase + string.digits):
 
-  #    passGiven = ''.join(random.choice(char)for _ in range(size))  
+     passGiven = ''.join(random.choice(char)for _ in range(size))  
 
-  #    return passGiven
+     return passGiven
 
 
                                           #find using password
 
   @classmethod
-  def findByCredentials(cls,password):
+  def findByPassword(cls,password):
 
     for credential in cls.credentialList:
       if credential.password == password:
@@ -43,9 +45,9 @@ class Credential:
 
                                                   #check if credentials exist
   @classmethod
-  def passwordExists(cls,password):
+  def accountExists(cls,username):
     for credential in cls.credentialList:
-      if credential.password == password:
+      if credential.username == username:
         return True
 
       return False

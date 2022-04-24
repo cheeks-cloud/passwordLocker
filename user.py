@@ -30,12 +30,11 @@ class User:
 
                                          #method to check whether a user exists 
   @classmethod
-  def userExists(cls,email):
+  def userExists(cls,username):
     for user in cls.userList:
-       if user.email == email:
-           return True
-
-       return False
+      if user.username == username:
+        return True
+      return False
 
                                             #method to display all users      
 
@@ -47,13 +46,12 @@ class User:
 
   @classmethod
   def copyEmail(cls,username):
-    userFound = username.findByUsername(username)
-    pyperclip.copyEmail(userFound.email)
+    userFound = User.findByUsername(username)
+    pyperclip.copy(userFound.email)
 
 
 
 
 
-if __name__ == "__main__":
-  main()
+
      
