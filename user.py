@@ -1,4 +1,3 @@
-import pyperclip
 
 class User:
 
@@ -42,12 +41,9 @@ class User:
   def displayUsers(cls):
     return cls.userList
 
-                                               #method to copy and paste
+                     
 
-  @classmethod
-  def copyEmail(cls,username):
-    userFound = User.findByUsername(username)
-    pyperclip.copy(userFound.email)
+
 
 
 

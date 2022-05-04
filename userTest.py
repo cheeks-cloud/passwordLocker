@@ -4,9 +4,6 @@ from user import User
 
 from credential import Credential
 
-import pyperclip
-
-
 
 
 class TestUser(unittest.TestCase):
@@ -52,7 +49,7 @@ class TestUser(unittest.TestCase):
 
         foundUser = User.FindByUsername("cheeks")
 
-        self.assertEqual(foundUser.email,testUser.email)
+        self.assertEqual(foundUser.email,"testuser@org")
 
 
     def testuserExists(self):
@@ -68,11 +65,6 @@ class TestUser(unittest.TestCase):
         self.assertEqual(User.displayUsers(),User.userList)
 
 
-    # def testcopyEmail(self):
-    #     self.newUser.saveUser()
-    #     User.copyEmail("cheeks")
-
-    #     self.assertEqual(self.newUser.email,pyperclip.paste())
     
 
 

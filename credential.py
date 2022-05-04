@@ -1,4 +1,5 @@
-import random 
+import random
+
 
 
 class Credential:
@@ -22,16 +23,6 @@ class Credential:
     Credential.credentialList.remove(self)
 
 
-                                          #generatePassword
-
-  def generatePassword(self, size = 6, char=strings.ascii_uppercase +
-  ascii_lowercase + string.digits):
-
-     passGiven = ''.join(random.choice(char)for _ in range(size))  
-
-     return passGiven
-
-
                                           #find using password
 
   @classmethod
@@ -39,7 +30,7 @@ class Credential:
 
     for credential in cls.credentialList:
       if credential.password == password:
-        return account
+        return password
 
 
 
@@ -61,5 +52,4 @@ class Credential:
 
 
 
-if __name__ == "__main__":
-  main()
+
