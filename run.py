@@ -10,12 +10,13 @@ def createUser(fName, lName, email,username):
   return newUser
 
 def saveUser(user):
-  user.saveUser()
+  User.saveUser(user)
 
 def deleteUser(user):
-  user.deleteUser()
+  User.deleteUser(user)
 
 def userExists(username):
+
   return  User.userExists(username)
 
 def displayUsers():
@@ -30,10 +31,10 @@ def createCredential(username, password,account):
   return newCredential
 
 def saveCredential(credential):
-  credential.saveCredential()
+  Credential.saveCredential(credential)
 
 def deleteCredential(credential):
-   credential.deleteCredential()
+   Credential.deleteCredential(credential)
 
 def accountExists(username):
   return Credential.accountExists(username)
@@ -50,8 +51,10 @@ def main():
    print(f"Hello {username}. what would you like to do?")
    print('\n')
 
+  #  saveUser(createUser(fName,lName, username , email))
+
    while True:
-      print("Use these short codes : cc - create a new user , dc - display users, fc -find a user, ex -exit ")
+      print("Use these short codes : cc - create a new user , dc - display users, fc -find a user,mc - display credentials,dl - delete a user ex -exit ")
       short_code = input().lower()    
       if short_code == 'cc':
             print("Enter the users credentials")
@@ -99,7 +102,7 @@ def main():
               print("You dont seem to have any Users saved yet")
               print("\n")
 
-
+      elif short_code == 'mc':
           if displayCredential():
             print("Here is a list of all your credentials")
             print('\n')
@@ -108,7 +111,7 @@ def main():
               print(f'{credential.username}   {credential.password} {credential.account}')
               print('\n')
 
-            else:
+          else:
                 print('\n')
                 print("You dont seem to have any credential saved yet")
                 print("\n")
@@ -117,13 +120,13 @@ def main():
       elif short_code == 'fc':
           print("Enter the username you want to search for")
 
-          searchUser = input()
+          searchuser = input()
 
-          if userExists(searchUser):
-            print(f'{searchUser.fName}   {searchUser.lName}')
+          if userExists(searchuser):
+            searchUser = userExists(searchuser)
+            print(f' The user is:{searchUser.fName}   {searchUser.lName}')
             print('-' * 20)
-            print(f"Username is:{searchUser.username}")
-            print(f'Email address:{searchUser.email}')
+            print(f'Their Email address:{searchUser.email}')
           else:
             print("That user does not exist")
 
