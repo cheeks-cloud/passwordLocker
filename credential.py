@@ -35,9 +35,10 @@ class Credential:
   def accountExists(cls,username):
     for credential in cls.credentialList:
       if credential.username == username:
-        return True
+    
+       return True
 
-      return False
+    
 
                                           #display all credentials
   @classmethod

@@ -3,7 +3,7 @@
 from credential import Credential
 from user import User
 
-#create a new user 
+
 
 def createUser(fName, lName, email,username):
   newUser = User(fName,lName,email,username)
@@ -25,8 +25,6 @@ def findUByUsername(username):
   return User.findByUsername(username)
 
 
-
-
 def createCredential(username, password,account):
   newCredential = Credential(username, password, account)
   return newCredential
@@ -41,7 +39,7 @@ def accountExists(username):
   return Credential.accountExists(username)
 
 def displayCredential():
-  return User.displayCredential()
+  return Credential.displayCredential()
 
 def findCredential(password):
   return Credential.findByPassword(password)
@@ -54,29 +52,29 @@ def main():
 
    while True:
       print("Use these short codes : cc - create a new user , dc - display users, fc -find a user, ex -exit ")
-      short_code = input().lower    
+      short_code = input().lower()    
       if short_code == 'cc':
-            print("New User plus credentials")
+            print("Enter the users credentials")
             print("-"*10)
-            print ("First name ....")
+            print ("First name is:")
             fName = input()
 
-            print("Last name ...")
+            print("Last name:")
             lName = input()
 
-            print("Username  ...")
+            print("Username:")
             username = input()
 
-            print("Email address ...")
+            print("Email address:")
             email = input()
 
-            print("Enter username ....")
+            print("Enter username for site your creating password for:")
             username = input()
 
-            print("Enter password ....")
+            print("Enter password:")
             password = input()
 
-            print("Enter account ....")
+            print("Enter account:")
             account = input()
 
             saveUser(createUser(fName,lName, username , email))
@@ -124,8 +122,8 @@ def main():
           if userExists(searchUser):
             print(f'{searchUser.fName}   {searchUser.lName}')
             print('-' * 20)
-            print(f"Username is.......{searchUser.username}")
-            print(f'Email address.......{searchUser.email}')
+            print(f"Username is:{searchUser.username}")
+            print(f'Email address:{searchUser.email}')
           else:
             print("That user does not exist")
 

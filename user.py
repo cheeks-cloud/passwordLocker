@@ -33,7 +33,7 @@ class User:
     for user in cls.userList:
       if user.username == username:
         return True
-      return False
+      
 
                                             #method to display all users      
 
