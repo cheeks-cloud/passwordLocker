@@ -47,8 +47,8 @@ def findCredential(password):
   return Credential.findByPassword(password)
 
 def main():
-   print("Hello Welcome to your Paasword Locker Account. What is your name?")
-       
+   print("Hello Welcome to your Pasword Locker Account. What is your name?")
+   username = input()   
    print(f"Hello {username}. what would you like to do?")
    print('\n')
 

@@ -1,13 +1,10 @@
-import random
-
-
 
 class Credential:
 
   credentialList = []
 
 
-  def __init__(self,account,username,password):
+  def __init__(self,username,password,account):
     self.username = username
     self.password = password
     self.account = account
@@ -27,7 +24,6 @@ class Credential:
 
   @classmethod
   def findByPassword(cls,password):
-
     for credential in cls.credentialList:
       if credential.password == password:
         return password
